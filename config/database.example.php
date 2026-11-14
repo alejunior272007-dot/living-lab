@@ -3,13 +3,13 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/config.php';
 
-$dbHost = 'localhost';
-$dbName = 'u634365967_livinglab';
-$dbUser = 'u634365967_llusr';
-$dbPass = 'LivingLab2026';
+$host = "localhost";
+$user = "root";
+$pass = "adminale@272007";
+$db   = "living_lab"; // Sesuaikan dengan nama database lokal di Laragon kamu
 $dbCharset = 'utf8mb4';
 
-$dsn = "mysql:host={$dbHost};dbname={$dbName};charset={$dbCharset}";
+$dsn = "mysql:host={$host};dbname={$db};charset={$dbCharset}";
 
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -18,7 +18,7 @@ $options = [
 ];
 
 try {
-    $pdo = new PDO($dsn, $dbUser, $dbPass, $options);
+    $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (PDOException $exception) {
     http_response_code(500);
     exit('DETAIL ERROR: ' . htmlspecialchars($exception->getMessage()));

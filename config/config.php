@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 define('APP_NAME', 'Living Lab Support');
-   define('BASE_URL', '');
+define('BASE_URL', '/living-lab');
 define('UPLOAD_DIR', dirname(__DIR__) . '/uploads/dokumentasi');
 define('MAX_UPLOAD_BYTES', 5 * 1024 * 1024);
 
